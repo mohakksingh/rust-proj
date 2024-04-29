@@ -1,15 +1,11 @@
 fn main(){
-    let is_male =false;
-    let is_above_18 =true;
+    let greeting: String=String::from("hello world");
+    println!("{}",greeting);
 
-    if is_male{
-        println!("You are a male");
+    let char1 = greeting.chars().nth(0);
+    match char1{
+        Some(c) => println!("{}",c),
+        None => println!("No character found"),
     }
-    else{
-        println!("You are not a male")
-    }
-
-    if is_male && is_above_18{
-        println!("You are a legal male")
-    }
+    print!("{}",char1.unwrap());
 }
