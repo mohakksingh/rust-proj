@@ -1,11 +1,26 @@
 fn main(){
-    let greeting: String=String::from("hello world");
-    println!("{}",greeting);
+    //arrays ,maps,strings
+    let sentence=String::from("my name is mohak");
+    let first_word=get_first_word(sentence);
 
-    let char1 = greeting.chars().nth(0);
-    match char1{
-        Some(c) => println!("{}",c),
-        None => println!("No character found"),
+    let n=1000;
+    for i in 0..n{
+        println!("Hello world,! {}",i);
     }
-    print!("{}",char1.unwrap());
+
+    println!("First word is : {}",first_word);
+
+}
+
+fn get_first_word(sentence:String)->String{
+    let mut ans: String =String::from("");
+    for char in sentence.chars(){
+        ans.push_str(char.to_string().as_str());
+        if char == ' ' {
+            break;
+        }
+    }
+
+    return ans;
+
 }
