@@ -1,9 +1,15 @@
 fn main(){
-    let x: i32 = 5;
-    let y: u32 =1111;
-    let z: f32 = 1000.001;
+    let is_male =false;
+    let is_above_18 =true;
 
-    print!("x: {}",x);
-    print!("y: {}",y);
-    print!("z: {}",z);
+    if is_male{
+        println!("You are a male");
+    }
+    else{
+        println!("You are not a male")
+    }
+
+    if is_male && is_above_18{
+        println!("You are a legal male")
+    }
 }
