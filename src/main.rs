@@ -1,16 +1,22 @@
-struct  User{
-    name:String,
-    age : u32,
-    active :bool,
+struct Rect{
+    width: u32,
+    height:u32,
+}
+
+impl Rect{
+    fn area(&self)-> u32 {
+        return self.width * self.height;
+    }
+    fn perimeter(&self)->u32{
+        return 2 *(self.width*self.height);
+    }
 }
 
 fn main(){
-    let name=String::from("Mohak");
-    let user =User{
-        name:name,
-        age:30,
-        active:true,
+    let rect=Rect{
+        width:30,
+        height:50,
     };
-    print!("{} is {} years old.",user.name,user.age);
-
+    print!("The area of rectangle is : {}",rect.area());
+    print!("The perimeter of rectangle is : {}", rect.perimeter());
 }
