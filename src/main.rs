@@ -1,9 +1,9 @@
 fn main(){
-    let mut my_string=String::from("hello");
-    takes_ownership(my_string);
-    println!("{}", my_string);
+    let mut s1 =String::from("Hello,rust");
+    update_string(&mut s1);
+    print!("{}",s1);
 }
 
-fn takes_ownership(some_string:String){
-    println!("{}", some_string);
+fn update_string(s:&mut String){
+    s.push_str("World")
 }
